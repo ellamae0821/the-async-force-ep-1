@@ -70,7 +70,27 @@ function getPerson14Species () {
 
 // LIST OF ALL FILMS
 
+//var filmList = document.getElementById("filmList");
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", getFilms);
+oReq.open('GET', "http://swapi.co/api/films/");
+oReq.send();
+var filmList = document.getElementById("filmList");
 
+function getFilms () {
+  var content = JSON.parse(this.responseText);
+  for (let i=0, len = content.results.length; i< len; i++){
+    var eachFilm = document.createElement('li');
+    var createFilmHeader = document.createElement('h2');
+    createFilmHeader.innerHTML = content.results[i].title;
+    eachFilm.appendChild(createFilmHeader);
+    filmList.appendChild(eachFilm);
+  }
+}
+
+
+
+// LIST OF ALL FILM PLANETS
 
 
 
