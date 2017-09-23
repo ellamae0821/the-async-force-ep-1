@@ -107,39 +107,6 @@ var filmList = document.getElementById("filmList");
 var filmPlanets = document.createElement('ul');
 filmList.appendChild(filmPlanets);
 
-/*function getFilms () {
-  var content = JSON.parse(this.responseText);
-//  for (let i=0, len = content.results.length; i< len; i++){
-    var i = 0, len = content.results.length;
-    for(i+=i; i < len; i++){
-    var eachFilm = document.createElement('li');
-    var createFilmHeader = document.createElement('h2');
-    createFilmHeader.innerHTML = content.results[i].title;
-    eachFilm.appendChild(createFilmHeader);
-    filmList.appendChild(eachFilm);
-
-
-      for (var j=0; j<content.results[i].planets.length; j++){
-        var pReq = new XMLHttpRequest();
-        pReq.addEventListener("load", getPlanetFilms);
-        pReq.open("GET", content.results[i].planets[j]);
-        pReq.send();
-        }
-
-        function getPlanetFilms (){
-          var contentP = JSON.parse(this.responseText);
-          var planetLi = document.createElement("li");
-          var planetName = document.createElement("h4");
-          planetName.innerHTML = contentP.name;
-          planetLi.appendChild(planetName);
-          filmList.appendChild(planetLi);
-
-
-
-        }
-      }
-}*/
-
 
 
 function getFilms () {
