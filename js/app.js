@@ -18,6 +18,34 @@ function getPerson4 () {
 
 }
 
+
+/* I GIVE UP REFACTORING!!!
+function runRequest(swapiLink, elementName, propertyName){
+  var propertyNameReq = document.getElementById(elementName);
+  var newRequest = new XMLHttpRequest();
+  newRequest.addEventListener("load", newRequestFunc);
+  newRequest.open("GET", swapiLink);
+  newRequest.send();
+}
+
+
+function newqRequestFunc(){
+  var reqContent = JSON.parse(this.responseText);
+  if(Array.isArray(reqContent[propertyName])){
+    for(var i=0; i < reqContent[propertyName].length; i++){
+      newRequestFunc(reqContent[propertyName][i], elementName, propertyName);
+    }
+
+    } else if (reqContent[propertyName].indexOf("http://") !== -1){
+      runRequest(reqContent[propertyName], elementName, 'name');
+    } else {
+      document.querySelector(propertyName).innerHTML = reqContent[propertyName];
+    }
+}
+
+runRequest("http://www.swapi.co/api/people/4", "person4Name", "name" );
+
+*/
 //PERSON 14
 
 var person14Name = document.getElementById("person14Name");
@@ -32,6 +60,7 @@ function getPerson14 () {
   person14Name.innerHTML = content.name;
 
 }
+
 
 
 //PERSON 4 HOMEWORLD
